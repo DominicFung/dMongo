@@ -1,0 +1,38 @@
+name: dMongo
+version: "1.0"
+author: Dominic Fung <fung_dominic@hotmail.com>
+about: Decentralization wrapper for MongoDB
+args:
+    - config:
+        short: c
+        long: config
+        value_name: FILE
+        help: Sets a custom config file
+        takes_value: true
+    - dbport:
+        short: m
+        long: db_port
+        help: Set the mongoDB port value
+        required: true
+        value_name: DB PORT
+    - port:
+        short: p
+        long: port
+        help: Set the node port value
+        required: true
+        value_name: PORT
+    - dbpath:
+        short: d
+        long: db_data
+        help: Set the mongoDB data path
+        required: true
+        value_name: DB PATH
+subcommands:
+    - test:
+        about: controls testing features
+        version: "1.3"
+        author: Someone E. <someone_else@other.com>
+        args:
+            - debug:
+                short: d
+                help: print debug information
