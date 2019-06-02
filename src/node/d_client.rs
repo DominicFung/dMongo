@@ -62,11 +62,13 @@ pub fn get_stored_network(network: &Collection) -> HashSet<String> {
 
 pub fn get_net_from_single_source(ip: &str, port: &str) -> Result<String, &'static str> {
 
-    let mut http_string = String::from("http://");
-    http_string.push_str(ip);
-    http_string.push(':');
-    http_string.push_str(port);
-    http_string.push_str("/ip");
+    // let mut http_string = String::from("http://");
+    // http_string.push_str(ip);
+    // http_string.push(':');
+    // http_string.push_str(port);
+    // http_string.push_str("/ip");
+
+    let http_string = format!("http://{}:{}/ip", ip, port);
     
     match reqwest::get(&http_string) {
         Ok(mut response) => {

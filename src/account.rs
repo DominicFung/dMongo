@@ -23,7 +23,7 @@ fn get_ap(uuid: &str, blockchain: &Collection) -> i64 {
     };
 
     // Find the document and receive a cursor
-    let mut cursor = coll.find(Some(doc.clone()), None)
+    let mut cursor = coll.find(None, None)
         .ok().expect("Failed to execute find.");
 
     while let item = cursor.next() {

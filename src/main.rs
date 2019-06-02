@@ -74,8 +74,8 @@ fn main() {
     // cloning is said to be a good idea .... https://github.com/mongodb-labs/mongo-rust-driver-prototype/issues/139
     let client2 = client.clone();
 
-    let my_account = account::Account::recreate("ea102d82-5458-4a21-a26e-5e8b42218180", "dom@email.com", "asdhgashjaj", client);
-    my_account.get_uuid();
+    // let my_account = account::Account::recreate("ea102d82-5458-4a21-a26e-5e8b42218180", "dom@email.com", "asdhgashjaj", client);
+    // my_account.get_uuid();
 
     // // TEST node instatiation
     let test_node = node::Node::create(port, db_port);

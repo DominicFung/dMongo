@@ -41,7 +41,7 @@ impl Node {
         
         let addr = Ipv4Addr::new(127, 0, 0, 1);
         let client_handler = d_client::DClient::new(client);
-        let server_handler = d_server::DServer::new(mongo_port, port, client2);
+        let server_handler = d_server::DServer::new(mongo_port, port);
 
         let net_info = client_handler.get_network_info();
 
@@ -52,6 +52,7 @@ impl Node {
     }
 
     pub fn server_start(&self) -> () {
-        self.server.start()
+        //self.server.start()
+        ()
     }
 }
